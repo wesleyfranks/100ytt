@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"        # Build command for Vite
+  publish = "dist"                 # Directory containing the production build output
+
+[functions]
+  directory = "netlify/functions"  # Directory where your Netlify serverless functions are stored
+
+[functions."fetchYouTubeVideos"]
+  schedule = "0 3 * * *"           # Trigger the fetchYouTubeVideos function at 3:00 AM UTC every day

@@ -21,7 +21,15 @@ const VideoCounter = ({ videoCount }: { videoCount: number }) => {
       {/* Countdown */}
       <CountDown />
       <p className="text-xl text-gray-500 dark:text-gray-400">
-        Videos posted since December 11th up to March 31st, 2025.
+        {videoCount} <strong>Videos of Value</strong> posted since December 11th
+        up to March 31st, 2025.
+      </p>
+      <p className="text-sm text-gray-500 dark:text-gray-400 max-w-96 mt-6">
+        <i>
+          <strong>videos of value</strong> are videos that are filled with
+          educational content, tutorials, helpful information, and stories that are entertaining and fun.
+          The videos would be something for you as a viewer to say, <strong>"I got something out of this video."</strong>.
+        </i>
       </p>
     </div>
   );

@@ -1,26 +1,43 @@
 import { useEffect, useState } from 'react';
-import { fetchYouTubeVideos, VideoItem } from './utils/fetchYouTubeVideos';
+import {
+  fetchYouTubeVideosFromCache,
+  VideoItem,
+} from './utils/fetchYouTubeVideos';
 import YouTubeProfile from './components/YouTubeProfile';
 import VideoCounter from './components/VideoCounter';
 import VideoList from './components/VideoList';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [videos, setVideos] = useState<VideoItem[]>([]);
   const [darkMode, setDarkMode] = useState(true); // Default dark mode to true
 
-  const channelId = import.meta.env.VITE_YT_CHANNEL_ID;
-  const publishedAfter = '2024-12-31T00:00:00Z';
-
   useEffect(() => {
+    let isMounted = true; // Add a flag to prevent state updates on unmounted components
     (async () => {
       try {
-        const items = await fetchYouTubeVideos(channelId, publishedAfter);
-        setVideos(items);
+        const items = await fetchYouTubeVideosFromCache(); // Fetch from cached JSON
+        if (isMounted) {
+          setVideos(items);
+          toast.success('Videos loaded successfully!', {
+            toastId: 'videos-success',
+          });
+        }
       } catch (error) {
-        console.error('Error fetching videos:', error);
+        console.error('Error loading videos:', error);
+        if (isMounted) {
+          toast.error('Failed to load videos. Please try again later.', {
+            toastId: 'videos-error',
+          });
+        }
       }
     })();
+
+    return () => {
+      isMounted = false; // Cleanup: prevent state updates if unmounted
+    };
   }, []);
 
   const videoCount = videos.length;
@@ -34,6 +51,9 @@ function App() {
     <div className={darkMode ? 'dark' : ''}>
       <div className="min-h-screen p-6 font-inter bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors">
         <div className="max-w-5xl mx-auto relative">
+          {/* Toast Container */}
+          <ToastContainer position="bottom-right" autoClose={5000} />
+
           {/* Dark Mode Toggle Button */}
           <button
             onClick={() => setDarkMode(!darkMode)}
