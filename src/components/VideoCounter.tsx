@@ -1,3 +1,5 @@
+import CountDown from './CountDown';
+
 const VideoCounter = ({ videoCount }: { videoCount: number }) => {
   return (
     <div className="flex flex-col items-center justify-center mb-6">
@@ -15,8 +17,11 @@ const VideoCounter = ({ videoCount }: { videoCount: number }) => {
       >
         {videoCount}/100
       </h2>
-      <p className="text-xl text-gray-500 dark:text-gray-400 mt-2">
-        Videos posted since December 10th up to March 31st, 2025.
+
+      {/* Countdown */}
+      <CountDown />
+      <p className="text-xl text-gray-500 dark:text-gray-400">
+        Videos posted since December 11th up to March 31st, 2025.
       </p>
     </div>
   );
