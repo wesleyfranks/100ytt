@@ -10,7 +10,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true); // Default dark mode to true
 
   const channelId = import.meta.env.VITE_YT_CHANNEL_ID;
-  const publishedAfter = '2024-12-10T00:00:00Z';
+  const publishedAfter = '2024-12-31T00:00:00Z';
 
   useEffect(() => {
     (async () => {

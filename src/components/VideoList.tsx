@@ -12,7 +12,7 @@ const VideoList = ({ videos }: { videos: VideoItem[] }) => {
             key={videoId}
             href={`https://www.youtube.com/watch?v=${videoId}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener external"
             className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition overflow-hidden"
           >
             {thumbnails.medium && (
