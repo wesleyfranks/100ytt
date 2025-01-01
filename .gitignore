@@ -1,3 +1,6 @@
+# netlify
+ *.netlify/*
+
 # Logs
 logs
 *.log
