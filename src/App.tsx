@@ -3,6 +3,7 @@ import { fetchVideosFromJSON, VideoItem } from './utils/fetchYouTubeVideos';
 import YouTubeProfile from './components/YouTubeProfile';
 import VideoCounter from './components/VideoCounter';
 import VideoList from './components/VideoList';
+import Footer from './components/Footer';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
           {/* Video List */}
           <VideoList videos={videos} />
         </div>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );
