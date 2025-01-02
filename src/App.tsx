@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchYouTubeVideos, VideoItem } from './utils/fetchYouTubeVideos';
+import { fetchVideosFromJSON, VideoItem } from './utils/fetchYouTubeVideos';
 import YouTubeProfile from './components/YouTubeProfile';
 import VideoCounter from './components/VideoCounter';
 import VideoList from './components/VideoList';
@@ -9,13 +9,10 @@ function App() {
   const [videos, setVideos] = useState<VideoItem[]>([]);
   const [darkMode, setDarkMode] = useState(true); // Default dark mode to true
 
-  const channelId = import.meta.env.VITE_YT_CHANNEL_ID;
-  const publishedAfter = '2024-12-31T00:00:00Z';
-
   useEffect(() => {
     (async () => {
       try {
-        const items = await fetchYouTubeVideos(channelId, publishedAfter);
+        const items = await fetchVideosFromJSON();
         setVideos(items);
       } catch (error) {
         console.error('Error fetching videos:', error);
