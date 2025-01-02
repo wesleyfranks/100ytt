@@ -9,26 +9,22 @@ export type VideoItem = {
   };
 };
 
-export async function fetchYouTubeVideos(
-  channelId: string,
-  publishedAfter: string
-): Promise<VideoItem[]> {
-  const apiKey = import.meta.env.VITE_YT_API_KEY; // from .env
+export async function fetchVideosFromJSON() {
+  const filterDate = new Date('2024-12-31T00:00:00Z'); // Set the filter date
 
-  if (!apiKey) {
-    throw new Error('Missing VITE_YT_API_KEY in .env');
+  try {
+    const response = await fetch('/videos.json');
+    const data = await response.json();
+
+    // Filter videos based on the `publishedAt` date
+    const filteredVideos = data.filter((video: VideoItem) => {
+      const publishedAt = new Date(video.snippet.publishedAt);
+      return publishedAt > filterDate;
+    });
+
+    return filteredVideos; // Return only the filtered videos
+  } catch (error) {
+    console.error('Error fetching videos from JSON file:', error);
+    throw error;
   }
-
-  const url = new URL('https://www.googleapis.com/youtube/v3/search');
-  url.searchParams.append('key', apiKey);
-  url.searchParams.append('channelId', channelId);
-  url.searchParams.append('part', 'snippet');
-  url.searchParams.append('order', 'date');
-  url.searchParams.append('maxResults', '50');
-  url.searchParams.append('publishedAfter', publishedAfter);
-  url.searchParams.append('type', 'video');
-
-  const res = await fetch(url.toString());
-  const data = await res.json();
-  return data.items || [];
 }

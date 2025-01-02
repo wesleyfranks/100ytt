@@ -1,3 +1,7 @@
+# netlify
+ .netlify/
+ .netlify/functions-serve/
+
 # Logs
 logs
 *.log
