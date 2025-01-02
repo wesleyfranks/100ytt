@@ -27,10 +27,16 @@ const CountDown = () => {
   return (
     <p
       className="
-    flex flex-col items-center justify-center mb-6
-    text-[4rem] sm:text-[5rem] font-semibold text-gray-500 dark:text-gray-400"
+        font-extrabold 
+        bg-gray-500 
+        text-transparent 
+        bg-clip-text 
+        text-[10vw]      
+        whitespace-nowrap
+        leading-[1.1]
+        "
     >
-      {daysLeft} days left
+      {daysLeft > 0 ? `${daysLeft} days left` : 'Countdown Complete'}
     </p>
   );
 };
