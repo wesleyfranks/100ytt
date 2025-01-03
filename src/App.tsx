@@ -3,6 +3,7 @@ import { fetchVideosFromJSON, VideoItem } from './utils/fetchYouTubeVideos';
 import YouTubeProfile from './components/YouTubeProfile';
 import VideoCounter from './components/VideoCounter';
 import VideoList from './components/VideoList';
+import Footer from './components/Footer';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 function App() {
@@ -29,8 +30,8 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className="min-h-screen p-6 font-inter bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors">
-        <div className="max-w-5xl mx-auto relative">
+      <div className="min-h-screen flex flex-col font-inter bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors">
+        <div className="flex-grow max-w-5xl mx-auto p-6">
           {/* Dark Mode Toggle Button */}
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -50,6 +51,9 @@ function App() {
           {/* Video List */}
           <VideoList videos={videos} />
         </div>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );
