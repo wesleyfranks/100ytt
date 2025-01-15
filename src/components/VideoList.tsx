@@ -45,6 +45,8 @@ const VideoList = ({ videos }: { videos: VideoItem[] }) => {
                   >
                     {originalIndex + 1}
                   </div>
+
+                  {/* Thumbnail */}
                   {thumbnails.medium && (
                     <img
                       src={thumbnails.medium.url}
@@ -52,9 +54,18 @@ const VideoList = ({ videos }: { videos: VideoItem[] }) => {
                       className="w-full h-auto"
                     />
                   )}
-                  <div className="p-4">
-                    <h3 className="font-semibold text-lg">{title}</h3>
-                    <p className="text-sm text-gray-400">
+
+                  {/* Title and Date Container */}
+                  <div className="p-4 relative h-28">
+                    <h3 className="font-semibold text-lg line-clamp-2">
+                      {title}
+                    </h3>
+
+                    {/* Published Date */}
+                    <p
+                      className="absolute bottom-2 right-2 text-sm text-white bg-black bg-opacity-70 px-2 py-1 rounded"
+                      style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
+                    >
                       {new Date(publishedAt).toLocaleDateString()}
                     </p>
                   </div>
