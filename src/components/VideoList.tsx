@@ -38,7 +38,7 @@ const VideoList = ({ videos }: { videos: VideoItem[] }) => {
                 >
                   {/* Video number in the top-left corner */}
                   <div
-                    className="absolute top-2 left-2 bg-gray-800 text-white text-sm md:text-base font-bold rounded-full w-8 h-8 flex items-center justify-center shadow-lg"
+                    className="absolute bottom-2 left-2 bg-gray-800 text-white text-sm md:text-base font-bold rounded-full w-8 h-8 flex items-center justify-center shadow-lg"
                     style={{
                       backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background
                     }}
