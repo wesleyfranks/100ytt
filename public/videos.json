@@ -5,7 +5,9 @@
       "title": "OpenWeather API AWS S3 and Python — #DevOpsAllStarsChallenge — Day 1",
       "publishedAt": "2025-01-10T10:00:00Z",
       "thumbnails": {
-        "medium": { "url": "https://i.ytimg.com/vi/4smNS8XSHx0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBZ9KeQXbUGqpLAuu8DYCx2hycNvg" }
+        "medium": {
+          "url": "https://i.ytimg.com/vi/4smNS8XSHx0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBZ9KeQXbUGqpLAuu8DYCx2hycNvg"
+        }
       }
     }
   },
@@ -15,7 +17,21 @@
       "title": "SportsDataIO API Python AWS SNS AWS Lambda AWS EventBridge - #DevOpsAllStarsChallenge - Day2",
       "publishedAt": "2025-01-14T15:30:00Z",
       "thumbnails": {
-        "medium": { "url": "https://i.ytimg.com/vi/Nb_SFdMu10Y/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCwXqXN5G6HcgVa1McC4sdtAFuPAQ" }
+        "medium": {
+          "url": "https://i.ytimg.com/vi/Nb_SFdMu10Y/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCwXqXN5G6HcgVa1McC4sdtAFuPAQ"
+        }
+      }
+    }
+  },
+  {
+    "id": { "videoId": "ETwZ2QU-YWM" },
+    "snippet": {
+      "title": "SportsDataIO — DataLake — AWS S3, AWS Glue, and AWS Athena, Python, #DevOpsAllStarsChallenge - Day 3",
+      "publishedAt": "2025-01-23T10:30:00Z",
+      "thumbnails": {
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ETwZ2QU-YWM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAKa8BsrFtGMitsQcDEB5QMRhRx8w"
+        }
       }
     }
   }
