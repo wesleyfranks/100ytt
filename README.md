@@ -3,4 +3,5 @@
 
 https://100ytvids-wesleyfranks.netlify.app/
 
-<img width="1145" alt="image" src="https://github.com/user-attachments/assets/e8682d79-8fb8-4180-a489-a0c572fe25b2" />
+![image](https://github.com/user-attachments/assets/f41b00f2-77bf-4b4c-89af-c9bfaa760206)
+
