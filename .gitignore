@@ -40,3 +40,4 @@ dist-ssr
 # Except for getYouTubeVideos.py
 !/src/lambda/python/getYouTubeVideos.py
 
+src/lambda/function.zip
