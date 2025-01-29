@@ -3,7 +3,7 @@
  .netlify/functions-serve/
 
  # virtual environments
- .100yt/
+ venv/
 
 # Logs
 logs
