@@ -22,17 +22,5 @@
         }
       }
     }
-  },
-  {
-    "id": { "videoId": "ETwZ2QU-YWM" },
-    "snippet": {
-      "title": "SportsDataIO — DataLake — AWS S3, AWS Glue, and AWS Athena, Python, #DevOpsAllStarsChallenge - Day 3",
-      "publishedAt": "2025-01-23T10:30:00Z",
-      "thumbnails": {
-        "medium": {
-          "url": "https://i.ytimg.com/vi/ETwZ2QU-YWM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAKa8BsrFtGMitsQcDEB5QMRhRx8w"
-        }
-      }
-    }
   }
 ]
