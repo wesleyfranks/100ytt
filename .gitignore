@@ -1,11 +1,12 @@
-# netlify
- .netlify/
- .netlify/functions-serve/
-
- # virtual environments
- venv/
- __pycache__/
+# Virtual Environment
+venv/
 .venv/
+env/
+*/env/
+*/venv/
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Logs
 logs
