@@ -2,6 +2,9 @@
  .netlify/
  .netlify/functions-serve/
 
+ # virtual environments
+ .100yt/
+
 # Logs
 logs
 *.log
